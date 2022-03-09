@@ -28,10 +28,6 @@ public class AsyncService{
 		asyncRepository.saveAndFlush(result);
 	}
 	
-	public TaskModel asyncRepositoryUpdate(TaskModel taskModel) {
-		return asyncRepository.saveAndFlush(taskModel);
-	}
-	
 	public TaskModel asyncRepositoryGet(String taskId)
 	{
 		return asyncRepository.findById(taskId).get();

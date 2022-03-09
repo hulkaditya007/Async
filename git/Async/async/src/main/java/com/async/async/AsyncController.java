@@ -1,11 +1,5 @@
 package com.async.async;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import java.util.Stack;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +29,7 @@ public class AsyncController {
 		return taskModel;
 	}
 	
-	@GetMapping("/GetTask/{taskId}")
+	@GetMapping("/PollingTask/{taskId}")
 	public TaskModel getTask(@PathVariable String taskId)
 	{
 		return asyncService.asyncRepositoryGet(taskId);
